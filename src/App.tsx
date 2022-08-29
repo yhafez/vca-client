@@ -1,28 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import React from 'react'
+import Typography from '@mui/material/Typography'
+import AppBar from '@mui/material/AppBar'
+
+import VideoPlayer from './components/VideoPlayer'
+import Options from './components/Options'
+import Notifications from './components/Notifications'
+
 import './App.css'
 
 function App() {
-	const [count, setCount] = useState(0)
-
 	return (
-		<div className="App">
-			<div>
-				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-				<a href="https://reactjs.org" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+		<div
+			className="App"
+			style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}
+		>
+			<AppBar
+				position="static"
+				color="transparent"
+				sx={theme => ({
+					borderRadius: 15,
+					margin: '30px 100px',
+					display: 'flex',
+					flexDirection: 'row',
+					justifyContent: 'center',
+					alignItems: 'center',
+					width: '600px',
+					border: '2px solid black',
+
+					[theme.breakpoints.down('xs')]: {
+						width: '90%',
+					},
+				})}
+			>
+				<Typography variant="h2" align="center">
+					Video Chat App
+				</Typography>
+			</AppBar>
+			<VideoPlayer />
+			<Options>
+				<Notifications />
+			</Options>
 		</div>
 	)
 }
