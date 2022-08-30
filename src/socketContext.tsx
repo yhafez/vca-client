@@ -38,16 +38,14 @@ const ContextProvider = ({ children }: { children?: React.ReactNode }) => {
 
 	const myVideo = useRef<HTMLVideoElement>(null)
 	const userVideo = useRef<HTMLVideoElement>(null)
-	const connectionRef = useRef(null)
+	const connectionRef = useRef<Peer.Instance | null>(null)
 
 	useEffect(() => {
-		console.log('myVideo', myVideo)
-
 		navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(currentStream => {
 			setStream(currentStream)
 
 			if (myVideo && myVideo.current) myVideo.current.srcObject = currentStream
-			else console.error('this myVideo.current.srcObject error')
+			else console.error('myVideo.current.srcObject error')
 		})
 
 		socket.on('me', id => setMe(id))
@@ -86,6 +84,8 @@ const ContextProvider = ({ children }: { children?: React.ReactNode }) => {
 			peer.signal(call.signal)
 		} else console.error('call.signal error')
 
+		console.log('connectionRef:', connectionRef)
+		console.log('connectionRef.current: ', connectionRef.current)
 		if (connectionRef && connectionRef.current) connectionRef.current = peer
 		else console.error('connectionRef.current error')
 	}
