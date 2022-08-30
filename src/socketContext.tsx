@@ -12,8 +12,8 @@ interface iCall {
 interface ISocketContext {
 	call: iCall | undefined
 	callAccepted: boolean
-	myVideo: HTMLVideoElement | undefined
-	userVideo: HTMLVideoElement | undefined
+	myVideo: React.RefObject<HTMLVideoElement> | undefined
+	userVideo: React.RefObject<HTMLVideoElement> | undefined
 	stream: MediaStream | undefined
 	name: string
 	setName: React.Dispatch<React.SetStateAction<string>>
