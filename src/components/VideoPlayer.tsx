@@ -42,7 +42,7 @@ const VideoPlayer = () => {
 				<Paper sx={{ padding: '10px', border: '2px solid black', margin: '10px' }}>
 					<Grid item xs={12} md={6}>
 						<Typography variant="h5" gutterBottom>
-							Name
+							{call?.name || 'Name'}
 						</Typography>
 						<video
 							playsInline

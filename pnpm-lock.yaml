@@ -9,6 +9,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.1.0
   '@emotion/react': ^11.10.0
   '@emotion/styled': ^11.10.0
+  '@mui/icons-material': ^5.10.3
   '@mui/material': ^5.10.3
   '@mui/styles': ^5.10.3
   '@storybook/addon-actions': ^6.5.10
@@ -24,6 +25,7 @@ specifiers:
   '@testing-library/user-event': ^14.4.3
   '@types/jest': ^28.1.8
   '@types/react': ^18.0.17
+  '@types/react-copy-to-clipboard': ^5.0.4
   '@types/react-dom': ^18.0.6
   '@types/simple-peer': ^9.11.5
   '@typescript-eslint/eslint-plugin': ^5.35.1
@@ -68,6 +70,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.1.0
   '@emotion/react': 11.10.0_tu23i5xxn6kbev62oblybgbdem
   '@emotion/styled': 11.10.0_j46kbo7layvgw6ebzgyotlgnfu
+  '@mui/icons-material': 5.10.3_y3w5kybebkk4omfqm52bdtcctq
   '@mui/material': 5.10.3_sqzxty2p7kxc2tmue4tecplwku
   '@mui/styles': 5.10.3_ug65io7jkbhmo4fihdmbrh3ina
   '@storybook/addon-actions': 6.5.10_biqbaboplfbrettd7655fr4n2y
@@ -83,6 +86,7 @@ devDependencies:
   '@testing-library/user-event': 14.4.3
   '@types/jest': 28.1.8
   '@types/react': 18.0.17
+  '@types/react-copy-to-clipboard': 5.0.4
   '@types/react-dom': 18.0.6
   '@types/simple-peer': 9.11.5
   '@typescript-eslint/eslint-plugin': 5.35.1_pfwtupu3r4wxmgbx6hj7gwmyuu
@@ -2445,6 +2449,23 @@ packages:
     resolution: {integrity: sha512-mX2S0d1oboKBbWQqWIgRmyALAEzh37yiknpD3mKx8bcoMKbp1VtqzIt0aeHP16Uhsd0eValDFILxLNHWi0oddQ==}
     dev: true
 
+  /@mui/icons-material/5.10.3_y3w5kybebkk4omfqm52bdtcctq:
+    resolution: {integrity: sha512-o0kbUlsWCBtCE0wP33cGKbyryCh7kpm2EECYMPDmWrLhbA+HUODXIdhiTFS26szp2xXo9HY1lEx0ufeJ+tddYw==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@mui/material': ^5.0.0
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@mui/material': 5.10.3_sqzxty2p7kxc2tmue4tecplwku
+      '@types/react': 18.0.17
+      react: 18.2.0
+    dev: true
+
   /@mui/material/5.10.3_sqzxty2p7kxc2tmue4tecplwku:
     resolution: {integrity: sha512-g0lzHcqWHYeOEAxTzcwpM1I7b+wyiRTeXkEdRsspnOpZtb0H/1xg386tMFRGbxBJ4zfVGT+TWublofw7pyQkqw==}
     engines: {node: '>=12.0.0'}
@@ -4427,6 +4448,12 @@ packages:
 
   /@types/qs/6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
+    dev: true
+
+  /@types/react-copy-to-clipboard/5.0.4:
+    resolution: {integrity: sha512-otTJsJpofYAeaIeOwV5xBUGpo6exXG2HX7X4nseToCB2VgPEBxGBHCm/FecZ676doNR7HCSTVtmohxfG2b3/yQ==}
+    dependencies:
+      '@types/react': 18.0.17
     dev: true
 
   /@types/react-dom/18.0.6:
