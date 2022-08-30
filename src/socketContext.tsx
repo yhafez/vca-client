@@ -13,6 +13,7 @@ interface ISocketContext {
 	call: iCall | undefined
 	callAccepted: boolean
 	myVideo: HTMLVideoElement | undefined
+	userVideo: HTMLVideoElement | undefined
 	stream: MediaStream | undefined
 	name: string
 	setName: React.Dispatch<React.SetStateAction<string>>
@@ -46,7 +47,7 @@ const ContextProvider = ({ children }: { children?: React.ReactNode }) => {
 			setStream(currentStream)
 
 			if (myVideo && myVideo.current) myVideo.current.srcObject = currentStream
-			else console.error('this current.srcObject error')
+			else console.error('this myVideo.current.srcObject error')
 		})
 
 		socket.on('me', id => setMe(id))
