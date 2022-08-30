@@ -39,7 +39,7 @@
 		"lint": "pnpm lint:format && pnpm lint:fix ",
 		"lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
 		"lint:format": "prettier  --config ./.prettierrc --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
-		"prepare": "husky install"
+		"prepare": "husky install",
 		"type-check": "tsc",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
