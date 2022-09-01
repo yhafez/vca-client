@@ -34,6 +34,7 @@
 		"start": "vite --port $PORT",
 		"start:dev": "vite",
 		"dev": "docker-compose -f docker-compose.dev.yml up",
+		"prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "NODE_ENV=test jest",
