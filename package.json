@@ -25,7 +25,8 @@
 		"url": "https://github.com/yhafez/vite-client-template.git"
 	},
 	"engines": {
-		"pnpm": ">=7.9.5"
+		"pnpm": ">=7.9.5",
+		"node": ">=16.11.1"
 	},
 	"main": "src/index.tsx",
 	"typings": "src/vite-env.d.ts",

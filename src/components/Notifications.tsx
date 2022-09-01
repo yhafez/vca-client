@@ -9,9 +9,14 @@ const Notifications = () => {
 	return (
 		<>
 			{call?.isReceivedCall && !callAccepted && (
-				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					<h1>{call.name} is calling:</h1>
-					<Button variant="contained" color="primary" onClick={answerCall}>
+				<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+					<h1>{call.name || 'Unkown Caller'} is calling:</h1>
+					<Button
+						variant="contained"
+						color="primary"
+						onClick={answerCall}
+						style={{ marginLeft: '40px' }}
+					>
 						Answer
 					</Button>
 				</div>

@@ -26,7 +26,7 @@ interface ISocketContext {
 
 const SocketContext = createContext<ISocketContext>({} as ISocketContext)
 
-const socket = io('http://localhost:5001')
+const socket = io('https://video-chat-app-yh.herokuapp.com/')
 
 const ContextProvider = ({ children }: { children?: React.ReactNode }) => {
 	const [stream, setStream] = useState<MediaStream>()
