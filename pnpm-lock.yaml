@@ -43,7 +43,7 @@ specifiers:
   jest: ^26
   jest-environment-jsdom: ^26
   lint-staged: ^13.0.3
-  pnpm: '3'
+  pnpm: ^7.9.5
   prettier: ^2.7.1
   react: ^18.2.0
   react-copy-to-clipboard: ^5.1.0
@@ -105,7 +105,7 @@ devDependencies:
   jest: 26.6.3_ts-node@10.9.1
   jest-environment-jsdom: 26.6.2
   lint-staged: 13.0.3
-  pnpm: 3.8.1
+  pnpm: 7.9.5
   prettier: 2.7.1
   ts-node: 10.9.1_typescript@4.8.2
   typescript: 4.8.2
@@ -11811,9 +11811,9 @@ packages:
       - typescript
     dev: true
 
-  /pnpm/3.8.1:
-    resolution: {integrity: sha512-uINy/U+TNvUHInG1l0/NrgDosUtafn9BrHjP5+v+ojpw+zb/lgXjkQmMHB4461LKezlNoBb7+0JOrNnm5JhZFg==}
-    engines: {node: '>=8.15'}
+  /pnpm/7.9.5:
+    resolution: {integrity: sha512-+r7+PlBIsblqia8eUOUsBp/R+lHmGAm55jyQRt3DWMUI0srVR1aNJhQECfx24L53Ckz9g48mVxQXEniQMWQPmw==}
+    engines: {node: '>=14.6'}
     hasBin: true
     dev: true
 
